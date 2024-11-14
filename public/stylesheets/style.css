@@ -1,3 +1,513 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* * {
+  border: 1px solid red;
+} */
+
+body {
+  font-family: sans-serif;
+  margin: 2%;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+image {
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#FooterAccordion {
+  display: none;
+}
+
+/* header*/
+
+.SiteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Container input + icon */
+.SearchAndIcons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.SearchContainer {
+  flex: 0 0 300px;
+  display: inline-block;
+  position: relative;
+  margin-right: auto;
+  justify-content: start;
+}
+
+/* input filed */
+.SearchContainer input {
+  width: 100%;
+  height: 40px;
+  padding-left: 10%;
+  border-radius: 30px;
+  border: 1px solid #000000;
+  font-size: 20px;
+}
+
+/* search icon */
+.SearchContainer .bi-search {
+  position: absolute;
+  margin-left: 3%;
+  top: 18%;
+  color: gray;
+}
+
+/* inline header */
+.SiteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LogoContainer {
+  width: min-content;
+}
+
+.logo {
+  width: 15%;
+  min-width: 200px;
+}
+
+.icons {
+  display: inline-flex;
+  gap: 15%;
+  width: 64px;
+  text-align: right;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Meny decor<ation */
+
+.Menu {
+  display: flex;
+  gap: 16px;
+  padding-left: 0;
+}
+
+/* Styling section 2 flex Main container */
+.MainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+}
+¨ .MainImage {
+  width: 60%;
+  height: fit-content;
+  padding: 1%;
+}
+
+/* types of produkts 3 columns */
+.ClassicSection {
+  display: flex;
+  gap: 4%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+/* Section 3 flex */
+.PicBox {
+  width: 250px;
+  flex: 1 0 29%;
+}
+
+/* styling section 3 */
+
+.PicGrid {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.PicContainer {
+  position: relative;
+}
+
+.CenterPosition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 26px;
+  color: brown;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* Styling shop produkts */
+.ProductContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin-bottom: 2%;
+}
+
+/* Styling "Nyhet" container */
+
+.Badge {
+  position: absolute;
+  display: inline-flex;
+  border-radius: 4px;
+  width: 130px;
+  height: 40px;
+  top: 5%;
+  left: 5%;
+  background-color: black;
+  color: white;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Badge * {
+  margin: 0;
+}
+
+.ProductItem {
+  display: block;
+  flex: 1 1 22%;
+}
+
+.ProductItem img:hover {
+  opacity: 0.6;
+}
+
+.ProductItemContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column-reverse;
+}
+
+.ProductImageContainer {
+  margin-bottom: 6%;
+}
+
+.ProductImageItem {
+  position: relative;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.ProductImageItem img {
+  width: 100%;
+}
+
+.ProductImage {
+  display: block;
+}
+
+.ProductInfoContainer {
+  color: black;
+}
+
+.ProductInfoContainer > section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductItemTypeAndPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductItemTypeAndPrice > span {
+  font-weight: bolder;
+}
+
+.ProductBrand {
+  padding: 0;
+  margin: 3% 0 6% 0;
+  font-weight: lighter;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Heart on top of the product */
+.LikeButton {
+  display: inline-flex;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  color: black;
+}
+
+.LikeButton {
+  display: inline-flex;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  color: black;
+  opacity: 0.7;
+}
+
+/* sryling delivery sectionn  */
+
+.DeliveryBadge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2%;
+  gap: 20px;
+}
+
+.DeliveryBadgeItem {
+  display: flex;
+  align-items: center;
+}
+
+.DeliveryBadgeItem:hover {
+  color: unset;
+  opacity: unset;
+}
+
+.DeliveryBadgeItemContent {
+  display: flex;
+  align-items: center;
+}
+.DeliveryBadgeItemContentPic {
+  flex: 1 1 20%;
+  width: 48px;
+  height: 30px;
+}
+
+.DeliveryBadgeItemContentText {
+  text-wrap: nowrap;
+  flex: 1 1 80%;
+  padding: 5%;
+}
+
+/* Footer styling */
+footer {
+  background-color: gainsboro;
+  margin-bottom: 24px;
+}
+
+/* Columns Styling */
+.FooterMenu {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 2%;
+}
+
+/* remove boolets and plase text inline with text header */
+.ColumnFooterOne ul {
+  list-style-type: none;
+  padding-left: 0%;
+  margin: 0%;
+}
+
+/* remive space between text header and colum */
+.ColumnFooterOne h4 {
+  margin-right: 32px;
+  margin-bottom: 16px;
+}
+
+/* Remove underline and place text exactly in line with text header */
+.ColumnFooterOne a {
+  text-decoration: none;
+  text-align: left;
+  margin: 0%;
+}
+
+/* Centered copy rights */
+.CopyRights {
+  display: block;
+  text-align: center;
+}
+
+/* Responsive design for larger screens */
+.MainContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+}
+
+.MainImage {
+  width: 60%;
+  height: fit-content;
+  padding: 1%;
+}
+
+/* Responsive design 640px and 1024px */
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  #PageCategory {
+    display: none;
+  }
+  .MainContainer {
+    flex-direction: column-reverse;
+  }
+
+  .MainContainer p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 1%;
+  }
+
+  .MainImage {
+    width: 100%;
+    height: fit-content;
+  }
+  .ClassicSection {
+    display: none;
+  }
+
+  .ShopProdukts a {
+    flex: 1 1 40%;
+  }
+
+  .ProductItem {
+    color: black;
+    flex: 1 0 48%;
+  }
+
+  .DeliveryBadge a {
+    display: block;
+    flex: 1 1 47%;
+  }
+}
+/* Responsive design 640px and less */
+
+@media (max-width: 640px) {
+  .SiteHeader {
+    display: unset;
+  }
+  .SiteHeaderContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .LogoContainer {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 4%;
+  }
+  .logo {
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    object-fit: cover;
+  }
+
+  .SearchAndIcons {
+    margin: 0;
+    gap: 8%;
+  }
+
+  .SearchContainer {
+    align-self: start;
+    flex: 1;
+  }
+
+  .icons {
+    font-size: 24px;
+    flex: 0 0 80px;
+  }
+
+  .SearchContainer input {
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+    font-size: 20px;
+  }
+
+  .Menu {
+    display: flex;
+    flex-direction: column;
+    gap: unset;
+  }
+
+  #PageCategory {
+    display: none;
+  }
+
+  .ClassicSection {
+    display: none;
+  }
+  /* Styling a produkt section */
+  .MainContainer {
+    flex-direction: column-reverse;
+  }
+  .MainImage {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .ProductContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  /* Section about delivery and icones*/
+  .DeliveryBadge a {
+    display: block;
+    flex: 1 1 90%;
+  }
+
+  .DeliveryBadgeItemContentPic {
+    flex: none;
+  }
+
+  .FooterMenu {
+    display: none;
+    background-color: unset;
+  }
+
+  footer {
+    background-color: unset;
+  }
+
+  #FooterAccordion {
+    display: block;
+  }
+
+  .FooterItemLinks {
+    list-style-type: none;
+    padding-left: 0%;
+    margin: 0%;
+  }
+
+  .CopyRights {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+}

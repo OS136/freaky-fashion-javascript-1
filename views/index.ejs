@@ -1,11 +1,138 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/output.css' />
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
     <p class="text-3xl text-red-500">Welcome to <%= title %></p>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title || 'Freaky Fashion' %></title>
+    <!-- Dynamic title -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="SiteHeaderContainer">
+        <div class="SiteHeader">
+          <div class="LogoContainer">
+            <!-- Dynamically rendered logo image -->
+            <img alt="image" class="logo" src="<%= logoPath %>" />
+          </div>
+          <div class="SearchAndIcons">
+            <div class="SearchContainer">
+              <i class="bi bi-search"></i>
+              <input
+                type="text"
+                name="klädersektionerna"
+                placeholder="Sök produkt"
+              />
+            </div>
+
+            <ul class="icons">
+              <li>
+                <a href="#"><i class="bi bi-heart-fill"></i></a>
+              </li>
+
+              <li>
+                <a href="#"><i class="bi bi-basket"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <nav>
+          <ul class="Menu">
+            <li>
+              <a href="#">Nyheter</a>
+            </li>
+            <li id="PageCategory">
+              <a href="#">Kategorier</a>
+            </li>
+            <li>
+              <a href="#">Toplistan</a>
+            </li>
+            <li>
+              <a href="#">Rea</a>
+            </li>
+            <li>
+              <a href="#">Kampanjer</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- main content -->
+      <div class="MainContainer">
+        <article>
+          <h1>Lorem ipsum dolor</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </article>
+        <img
+          class="MainImage"
+          src="./Images/iStock-654407498.jpg"
+          alt="The main products"
+        />
+      </div>
+
+      <div class="ClassicSection">
+        <a class="PicBox">
+          <div class="PicContainer">
+            <h2 class="CenterPosition">Lorem ipsum dolor</h2>
+            <img
+              src="./Images/iStock-480767428.jpg"
+              alt="Fashion Outlook Ideas"
+              class="PicGrid"
+            />
+          </div>
+        </a>
+
+        <a class="PicBox">
+          <div class="PicContainer">
+            <h2 class="CenterPosition">Lorem ipsum dolor</h2>
+            <img
+              src="/Images/iStock-605984452.jpg"
+              alt="Man Fashion"
+              class="PicGrid"
+            />
+          </div>
+        </a>
+
+        <a class="PicBox">
+          <div class="PicContainer">
+            <h2 class="CenterPosition">Lorem ipsum dolor</h2>
+            <img
+              src="/images/iStock-970937374.jpg"
+              alt="Woman fashion"
+              class="PicGrid"
+            />
+          </div>
+        </a>
+      </div>
+    </main>
   </body>
 </html>
