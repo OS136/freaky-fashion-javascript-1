@@ -37,7 +37,7 @@
         <div class="SiteHeader">
           <div class="LogoContainer">
             <!-- Dynamically rendered logo image -->
-            <img alt="image" class="logo" src="<%= logoPath %>" />
+            <img alt="image" class="logo" src="<%= mainLogo %>" />
           </div>
           <div class="SearchAndIcons">
             <div class="SearchContainer">
@@ -94,7 +94,7 @@
         </article>
         <img
           class="MainImage"
-          src="./Images/iStock-654407498.jpg"
+          src="/images/iStock-654407498.jpg"
           alt="The main products"
         />
       </div>
@@ -104,7 +104,7 @@
           <div class="PicContainer">
             <h2 class="CenterPosition">Lorem ipsum dolor</h2>
             <img
-              src="./Images/iStock-480767428.jpg"
+              src="/images/iStock-480767428.jpg"
               alt="Fashion Outlook Ideas"
               class="PicGrid"
             />
@@ -115,7 +115,7 @@
           <div class="PicContainer">
             <h2 class="CenterPosition">Lorem ipsum dolor</h2>
             <img
-              src="/Images/iStock-605984452.jpg"
+              src="/images/iStock-605984452.jpg"
               alt="Man Fashion"
               class="PicGrid"
             />
@@ -133,6 +133,255 @@
           </div>
         </a>
       </div>
+      <div class="ProductContainer">
+        <% products.forEach(product => { %>
+        <div class="ProductItem">
+          <div class="ProductItemContainer">
+            <!-- product info -->
+            <div class="ProductInfoContainer">
+              <a href="http://localhost:3000/products/?q=<%= product.url %>">
+                <div class="ProductItemTypeAndPrice">
+                  <span class="productTitle"> <%= product.name %> </span>
+                  <span class="productPrice"><%=product.price %> </span>
+                </div>
+              </a>
+              <p class="ProductBrand"><%= product.brand %></p>
+            </div>
+            <!-- product card -->
+            <div class="ProductImageContainer">
+              <!-- product image -->
+              <div class="ProductImageItem">
+                <a
+                  href="http://localhost:3000/products/?q=<%= product.url %>"
+                  class="ProductImage"
+                >
+                  <img src="<%= productItemImageURL %>" alt="Product Image" />
+                </a>
+                <!-- badge -->
+                <div class="Badge">
+                  <p>Nyhet</p>
+                </div>
+                <!-- like button -->
+                <a class="LikeButton" href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 16 16"
+                    fill="black"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      stroke="black"
+                      d="M8 15s-7.333-4.868-7.333-9.643C.667 3.143 2.31 1.5 4.333 1.5c1.355 0 2.667.697 3.333 1.856C8.999 2.197 10.31 1.5 11.666 1.5c2.022 0 3.666 1.644 3.666 3.857C15.333 10.132 8 15 8 15z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% }) %>
+      </div>
+      <!-- Delivery section -->
+      <div class="DeliveryBadge">
+        <a class="DeliveryBadgeItem">
+          <div class="DeliveryBadgeItemContent">
+            <svg
+              class="DeliveryBadgeItemContentPic"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M3.668 2.501l-.288.646a.847.847 0 0 0 1.479.815l.245-.368a.81.81 0 0 1 1.034-.275.81.81 0 0 0 .724 0l.261-.13a1 1 0 0 1 .775-.05l.984.34q.118.04.243.054c.784.093.855.377.694.801-.155.41-.616.617-1.035.487l-.01-.003C8.274 4.663 7.748 4.5 6 4.5 4.8 4.5 3.5 5.62 3.5 7c0 1.96.826 2.166 1.696 2.382.46.115.935.233 1.304.618.449.467.393 1.181.339 1.877C6.755 12.96 6.674 14 8.5 14c1.75 0 3-3.5 3-4.5 0-.262.208-.468.444-.7.396-.392.87-.86.556-1.8-.097-.291-.396-.568-.641-.756-.174-.133-.207-.396-.052-.551a.33.33 0 0 1 .42-.042l1.085.724c.11.072.255.058.348-.035.15-.15.415-.083.489.117.16.43.445 1.05.849 1.357L15 8A7 7 0 1 1 3.668 2.501"
+              />
+            </svg>
+            <span class="DeliveryBadgeItemContentText"
+              >Gratis frakt och returer</span
+            >
+          </div>
+        </a>
+        <a class="DeliveryBadgeItem">
+          <div class="DeliveryBadgeItemContent">
+            <svg
+              class="DeliveryBadgeItemContentPic"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0"
+              />
+            </svg>
+            <span class="DeliveryBadgeItemContentText">Express frakt</span>
+          </div>
+        </a>
+        <a class="DeliveryBadgeItem">
+          <div class="DeliveryBadgeItemContent">
+            <svg
+              class="DeliveryBadgeItemContentPic"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"
+              />
+            </svg>
+            <span class="DeliveryBadgeItemContentText">Säkra betalningar</span>
+          </div>
+        </a>
+        <a class="DeliveryBadgeItem">
+          <div class="DeliveryBadgeItemContent">
+            <svg
+              class="DeliveryBadgeItemContentPic"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+              />
+              <path
+                d="M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"
+              />
+            </svg>
+            <span class="DeliveryBadgeItemContentText">Nyheter varje dag</span>
+          </div>
+        </a>
+      </div>
     </main>
+    <!-- FOOter meny -->
+    <footer>
+      <article class="FooterMenu">
+        <!-- kolumn 1 -->
+        <div class="ColumnFooterOne">
+          <h4>Shopping</h4>
+          <ul>
+            <li><a href="#">Vinterjäckor</a></li>
+            <li><a href="#">Pufferjackor</a></li>
+            <li><a href="#">Kappa</a></li>
+            <li><a href="#">Trenchcoats</a></li>
+          </ul>
+        </div>
+        <!-- Kolumn 2 -->
+        <div class="ColumnFooterOne">
+          <h4>Mina sidor</h4>
+          <ul>
+            <li><a href="#">Mina Ordrar</a></li>
+            <li><a href="#">Mitt konto</a></li>
+          </ul>
+        </div>
+        <!-- Kolumn 3 -->
+        <div class="ColumnFooterOne">
+          <h4>Kundtjänst</h4>
+          <ul>
+            <li><a href="#">Returnpolicy</a></li>
+            <li><a href="#">Integritetspolicy</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <div id="FooterAccordion">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Shopping
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul class="FooterItemLinks">
+                  <li><a href="#">Vinterjäckor</a></li>
+                  <li><a href="#">Pufferjackor</a></li>
+                  <li><a href="#">Kappa</a></li>
+                  <li><a href="#">Trenchcoats</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Mina sidor
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul class="FooterItemLinks">
+                  <li><a href="#">Mina Ordrar</a></li>
+                  <li><a href="#">Mitt konto</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Kundtjänst
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul class="FooterItemLinks">
+                  <li><a href="#">Returnpolicy</a></li>
+                  <li><a href="#">Integritetspolicy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="CopyRights"> &copy; Freaky Fashion</a>
+    </footer>
   </body>
 </html>

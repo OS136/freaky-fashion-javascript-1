@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
+    "create-db": "node ./db/utilities/create-db.js",
     "tailwind:watch": "tailwindcss --watch -i ./public/stylesheets/style.css -o ./public/stylesheets/output.css"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "better": "^0.1.0",
+    "better-sqlite3": "^11.6.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.1.10",
@@ -16,6 +19,7 @@
     "morgan": "~1.9.1",
     "nodemon": "^3.1.7",
     "postcss": "^8.4.47",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "sqlite3": "^5.1.7"
   }
 }
