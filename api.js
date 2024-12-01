@@ -11,8 +11,6 @@ const db = new sqlite3.Database(
 );
 
 router.get("/products", function (req, res, next) {
-  console.log("Running /api/products");
-
   const query = "SELECT name, SKU, price FROM products"; // SQL query
 
   db.all(query, [], (err, rows) => {

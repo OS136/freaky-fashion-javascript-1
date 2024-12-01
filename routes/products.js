@@ -44,8 +44,6 @@ router.get("/:id", function (req, res, next) {
         return res.status(500).send("Internal Server Error");
       }
 
-      console.log("product image: ", randomProducts);
-
       res.render("products", {
         title: product.name,
         imagePath: "/images/",

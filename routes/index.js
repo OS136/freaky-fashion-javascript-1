@@ -20,8 +20,6 @@ router.get("/", function (req, res, next) {
   db.all("SELECT * FROM products", [], function (error, rows) {
     if (error) return console.error(error.message);
 
-    // console.log(rows);
-
     res.render("index", {
       title: "Freaky Fashion",
       imagePath: "/images/",

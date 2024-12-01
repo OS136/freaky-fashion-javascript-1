@@ -39,7 +39,6 @@ router.post("/products/new", function (req, res) {
     productSKU,
   } = req.body;
 
-  console.log(req.body);
   const insert = db.prepare(`
     INSERT INTO products (
       name,
@@ -71,7 +70,6 @@ router.post("/products/new", function (req, res) {
         console.error(err.message);
         return res.status(500).send("Failed to store product.");
       }
-      console.log("redirecting to first admin page");
       res.status(200).send("Product lades till!");
     }
   );
