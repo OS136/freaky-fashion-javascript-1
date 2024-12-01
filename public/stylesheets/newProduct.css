@@ -1,0 +1,54 @@
+label {
+  margin-top: 5px;
+}
+
+.NewProductItem {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+#productName {
+  width: 128px;
+}
+
+#productDescription {
+  margin-right: 256px;
+  margin-bottom: 5px;
+}
+
+#productPrice {
+  width: 128px;
+  margin-bottom: 5px;
+}
+
+#productSKU {
+  width: 128px;
+  margin-bottom: 5px;
+}
+
+#productPicture {
+  margin-right: 70%;
+  margin-bottom: 5px;
+}
+
+#CategoriesContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  width: 128px;
+}
+
+#CategoriesLabel {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#ProductAddButton {
+  margin-top: 16px;
+}
+
+.CategoriesItem {
+  display: flex;
+  justify-content: space-between;
+}

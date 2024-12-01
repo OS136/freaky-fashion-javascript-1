@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administration</title>
+    <link rel="stylesheet" href="/stylesheets/productList.css" />
+    <link rel="stylesheet" href="/stylesheets/newProduct.css" />
+  </head>
+  <body>
+    <header class="MainHeaderSection">
+      <h1>Administration</h1>
+    </header>
+    <main class="AdminContainer">
+      <aside class="SiderbarContainer">
+        <ul class="SiteBarTopic">
+          <li>
+            <a href="#">Produkter</a>
+          </li>
+        </ul>
+      </aside>
+      <!-- Main box -->
+      <section class="MainSectionProdukter">
+        <form id="productForm">
+          <!-- Namn -->
+          <div class="NewProductItem">
+            <label for="productName">Namn</label>
+            <input type="text" id="productName" name="productName" required />
+          </div>
+          <!-- Beskrivning -->
+          <div class="NewProductItem">
+            <label for="textDescription">Beskrivning</label>
+            <textarea
+              id="productDescription"
+              name="productDescription"
+              rows="5"
+              cols="40"
+            ></textarea>
+          </div>
+          <!-- Bild -->
+          <div class="NewProductItem">
+            <label for="productPicture">Bild</label>
+            <input
+              id="productPicture"
+              type="text"
+              name="productPicture"
+              value="https://placehold.co/250x400/png"
+              required
+            />
+          </div>
+          <!-- SKU -->
+          <div class="NewProductItem">
+            <label for="productSKU">SKU</label>
+            <input type="text" id="productSKU" name="productSKU" required />
+          </div>
+          <!-- Pris -->
+          <div class="NewProductItem">
+            <label for="productPrice">Price</label>
+            <input
+              type="number"
+              id="productPrice"
+              name="productPrice"
+              required
+            />
+          </div>
+          <!-- Categiries -->
+          <div id="CategoriesContainer">
+            <br />
+            <h4 id="CategoriesLabel">Kategorier</h4>
+
+            <div class="CategoriesItem">
+              <label for="t-shirt">T-shirt</label>
+              <input type="checkbox" id="t-shirt" name="t-shirt" />
+            </div>
+            <div class="CategoriesItem">
+              <label for="summer">Sommar</label>
+              <input type="checkbox" id="summer" name="summer" />
+            </div>
+            <div class="CategoriesItem">
+              <label for="pants">Byxor</label>
+              <input type="checkbox" id="pants" name="pants" />
+            </div>
+            <div class="CategoriesItem">
+              <label for="shoes">Skor</label>
+              <input type="checkbox" id="shoes" name="shoes" />
+            </div>
+          </div>
+          <!-- Button -->
+          <button id="ProductAddButton" type="submit">Lägg Till</button>
+        </form>
+      </section>
+    </main>
+    <script src="/js/newProduct.js"></script>
+  </body>
+</html>

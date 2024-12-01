@@ -139,10 +139,10 @@
           <div class="ProductItemContainer">
             <!-- product info -->
             <div class="ProductInfoContainer">
-              <a href="http://localhost:3000/products/?q=<%= product.url %>">
+              <a href="http://localhost:3000/products/<%= product.url %>">
                 <div class="ProductItemTypeAndPrice">
                   <span class="productTitle"> <%= product.name %> </span>
-                  <span class="productPrice"><%=product.price %> </span>
+                  <span class="productPrice"><%=product.price %> SEK</span>
                 </div>
               </a>
               <p class="ProductBrand"><%= product.brand %></p>
@@ -152,7 +152,7 @@
               <!-- product image -->
               <div class="ProductImageItem">
                 <a
-                  href="http://localhost:3000/products/?q=<%= product.url %>"
+                  href="http://localhost:3000/products/<%= product.url %>"
                   class="ProductImage"
                 >
                   <img src="<%= productItemImageURL %>" alt="Product Image" />

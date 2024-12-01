@@ -1,0 +1,173 @@
+h2 {
+  text-align: center;
+}
+
+.ProductDetailsDetailBrand {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+#ProduktDetailsContainer {
+  display: flex;
+  margin-bottom: 2%;
+  gap: 4%;
+}
+
+.ProductDetailsInfoContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 40%;
+}
+
+#AddProductButton {
+  padding: 8px;
+  width: 148px !important;
+  text-wrap: nowrap;
+  border-radius: 8px;
+  background-color: unset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0);
+  animation: grow 0.2s forwards;
+}
+
+#AddProductButton:hover {
+  cursor: pointer;
+  background-color: rgba(145, 145, 145, 0.2);
+  animation: shrink 0.2s forwards;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.025);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ProductImageContainer {
+  flex: 1;
+}
+
+.ProductDetailsImageContainer {
+  display: flex;
+  flex: 0 0 40%;
+  width: 100%;
+}
+
+.ProduktDetailsText {
+  margin: 0 30% 0 0;
+}
+
+.ProductDetailsDetailTypeAndPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0% 0 0% 0px;
+}
+
+.ProductDetailsTypeAndPrice {
+  margin-bottom: 16px;
+}
+.ProductDetailsTypeAndPrice > span {
+  font-weight: bolder;
+}
+
+.ProductDetailsBrand {
+  padding: 0;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+/* Produkt Section */
+
+.Product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.ProductItemsContainer {
+  display: flex;
+  gap: 2%;
+}
+
+#AddProductButton {
+  width: 200px;
+  height: 50px;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .ProductItem {
+    flex: 1 1 45%;
+  }
+
+  .ProductBrand,
+  .ProductDetailsDetailBrand {
+    font-size: unset !important;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Produke-Details Page 2 */
+
+  #ProductDetailsContainer {
+    display: none;
+  }
+
+  .ProductDetailsTypeAndPrice > h3 {
+    margin-top: 16px;
+  }
+
+  .ProductBrand,
+  .ProductDetailsDetailBrand {
+    font-size: unset !important;
+  }
+
+  #AddProductButton {
+    width: 100% !important;
+    margin: 0 0 48px 0; /* reset other values and just add margin to bottom */
+  }
+
+  #ProduktDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 4%;
+  }
+
+  .ProductImageItem {
+    flex: 1 0 100% !important;
+  }
+
+  .ProductDetailsTypeAndPrice > span {
+    font-weight: bolder;
+  }
+
+  .ProductDetailsBrand {
+    padding: 0;
+    font-weight: lighter;
+    font-size: 10px;
+    text-decoration: none;
+  }
+
+  .ProductItem {
+    display: none;
+  }
+
+  .footer {
+    margin-bottom: 64px;
+  }
+}
