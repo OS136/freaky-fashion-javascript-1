@@ -1,6 +1,6 @@
 const tableBody = document.querySelector("#productTable tbody");
 
-async function fetchProducts() {
+async function loadProducts() {
   const response = await fetch("/api/products");
 
   if (!response.ok) {
